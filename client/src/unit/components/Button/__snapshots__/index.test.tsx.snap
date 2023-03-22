@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render the medium size by default 1`] = `
+<button
+  class="px-4 py-2 text-base bg-pink-600 text-white rounded w-full transition hover:opacity-80 disabled:opacity-70 disabled:cursor-not-allowed"
+>
+  <span>
+    button
+  </span>
+</button>
+`;
