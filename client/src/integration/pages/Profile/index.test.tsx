@@ -20,6 +20,7 @@ describe('<Profile />', () => {
       userProviderProps: {
         username: 'usuario2',
         authenticated: true,
+        error: '',
         login: jest.fn(),
         logout: jest.fn()
       }
@@ -35,6 +36,7 @@ describe('<Profile />', () => {
     render(<Profile />, {
       userProviderProps: {
         username: 'usuario2',
+        error: '',
         authenticated: true,
         login: jest.fn(),
         logout: logoutFn

@@ -5,7 +5,6 @@ import {
   UserProviderProps,
   useUser
 } from '.'
-import UsersService from '../../../services/users'
 
 const fakeUser = {
   username: 'user',
@@ -36,7 +35,7 @@ describe('useUser()', () => {
   it('should not authenticate if user does not exists', async () => {
     // mock local do signIn(), somente para funcionar nesta função.
     const signInMock = jest
-      .spyOn(UsersService, 'signIn')
+      .spyOn(require('services/users'), 'signIn')
       .mockReturnValueOnce(Promise.resolve())
 
     const { result } = renderHook(() => useUser(), {
@@ -75,7 +74,7 @@ describe('useUser()', () => {
 
   it('should throw error if login fails', async () => {
     const signInMock = jest
-      .spyOn(UsersService, 'signIn')
+      .spyOn(require('services/users'), 'signIn')
       .mockReturnValueOnce(Promise.reject('login error'))
 
     const { result } = renderHook(() => useUser(), {

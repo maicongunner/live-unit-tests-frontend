@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import SignUp from '.'
-import UsersService from '../../../services/users'
 
 const mockedNavigate = jest.fn()
 
@@ -32,7 +31,7 @@ describe('<SignUp />', () => {
 
   it('should fill sign up and submit correctly', () => {
     const mockedSignUp = jest
-      .spyOn(UsersService, 'signUp')
+      .spyOn(require('services/users'), 'signUp')
       .mockImplementation(() => Promise.resolve())
 
     render(<SignUp />)

@@ -39,6 +39,7 @@ describe('<SignIn />', () => {
     customRender(<SignIn />, {
       userProviderProps: {
         authenticated: false,
+        error: '',
         username: null,
         logout: jest.fn(),
         login: loginFn
