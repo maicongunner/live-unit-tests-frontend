@@ -15,7 +15,7 @@ async function signIn(username: string, password: string) {
       return data[0].username
     }
     return null
-  } catch (error) {
+  } catch (error: any) {
     throw new Error(error)
   }
 }
@@ -30,7 +30,7 @@ async function signUp(username: string, password: string) {
         'Content-Type': 'application/json'
       }
     })
-  } catch (error) {
+  } catch (error: any) {
     throw new Error(error)
   }
 }
